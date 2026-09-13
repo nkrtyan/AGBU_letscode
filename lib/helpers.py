@@ -1,6 +1,7 @@
 import logging
 import os
 
+import allure
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 
@@ -15,6 +16,11 @@ class Helper():
         logging.error(message)
         os.makedirs(self.test_logger.screenshot_dir, exist_ok=True)
         self.driver.save_screenshot(f"{self.test_logger.screenshot_dir}/{self.test_logger.test_name}.png")
+        allure.attach(
+            self.driver.get_screenshot_as_png(),
+            name=f"{self.test_logger.test_name}_failure",
+            attachment_type=allure.attachment_type.PNG,
+        )
 
     def go_to_page(self, url, new_window=False):
         try:

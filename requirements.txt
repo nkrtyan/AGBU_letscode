@@ -1,8 +1,0 @@
-allure-pytest
-allure-python-commons
-pycodestyle
-pytest
-pytest-xdist
-requests
-selenium
-faker
