@@ -3,7 +3,7 @@ from lib.helpers import Helper
 
 
 class PracticePage(Helper):
-
+    # locators
     title = (By.XPATH, "//title[text()='Practice Page']")
     btn_alert = (By.ID, "alertbtn")
     btn_hide = (By.ID, "hide-textbox")
