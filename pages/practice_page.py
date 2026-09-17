@@ -5,7 +5,7 @@ from lib.helpers import Helper
 class PracticePage(Helper):
 
     title = (By.XPATH, "//title[text()='Practice Page']")
-    btn_alert = (By.ID, "alertbtn0")
+    btn_alert = (By.ID, "alertbtn")
     btn_hide = (By.ID, "hide-textbox")
     inp_example = (By.ID, "displayed-text")
     btn_mousehover = (By.ID, 'mousehover')
